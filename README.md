@@ -20,7 +20,7 @@ Load the `jquery.ui.tooltip.altposition.js` script file after loading `jquery.ui
 ```
 
 The `altPosition` Object is added to Tooltip options.  
-The position is altered to `altPosition.position` ([jQuery UI Position](http://api.jqueryui.com/position/) Object) when any following conditions.
+The position is altered to `altPosition.position` (alternative [option.position](http://api.jqueryui.com/tooltip/#option-position) Object of Tooltip) when any following conditions.
 
 + The tag-name of the element is `altPosition.tagName`.
 + `outerWidth` of the element is greater than or equal to `altPosition.minOuterWidth`
