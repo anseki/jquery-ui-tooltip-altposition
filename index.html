@@ -70,12 +70,19 @@ For example, it overlap pulldown list of <code>select</code>, or it is too lower
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input,textarea,select'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#sample1'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'input,select,textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
   <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
     <span class="nx">tagName</span><span class="o">:</span> <span class="s1">'select'</span><span class="p">,</span>
-    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">;</span> <span class="p">},</span>
-    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span> <span class="c1">// Right side</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#sample2'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="p">},</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
