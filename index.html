@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/blitzer/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/sample.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="javascripts/jquery.ui.tooltip.altposition.min.js"></script>
+
     <title>Alter Position jQuery UI Tooltip</title>
   </head>
 
@@ -36,7 +42,7 @@
 
 <p>Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.<br>
 The default position is under the element. It looks best position. But, it is not sometimes.<br>
-For example, it overlap pulldown list of <code>select</code>, or it is too lower position under the high <code>textarea</code>.<br><img src="sample1.png" alt="jQuery UI Tooltip"></p>
+For example, it overlap pulldown list of <code>select</code>, or it is too lower position under the high <code>textarea</code>.<br><img src="images/sample1.png" width="365" height="242" alt="jQuery UI Tooltip"></p>
 
 <p>This plugin alters position by specified conditions. (e.g. height, tag-name)  </p>
 
@@ -70,15 +76,84 @@ For example, it overlap pulldown list of <code>select</code>, or it is too lower
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input,textarea,select'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#sample1'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'input,select,textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
   <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
     <span class="nx">tagName</span><span class="o">:</span> <span class="s1">'select'</span><span class="p">,</span>
-    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">;</span> <span class="p">},</span>
-    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span> <span class="c1">// Right side</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#sample2'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="p">},</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
+
+<div class="sample-view">
+<div id="normal">
+  <h2>Normal</h2>
+  <input type="text" value="" title="No problem.">
+  <select title="Overlap pulldown list.">
+    <option>Accordion
+    <option>Autocomplete
+    <option>Button
+    <option>Datepicker
+    <option>Dialog
+    <option>Menu
+    <option>Progressbar
+    <option>Slider
+  </select>
+  <textarea title="Too lower."></textarea>
+</div>
+
+<div id="sample1">
+  <h2>Sample 1</h2>
+  <input type="text" value="" title="This is a hint text.">
+  <select title="This is a hint text.">
+    <option>Accordion
+    <option>Autocomplete
+    <option>Button
+    <option>Datepicker
+    <option>Dialog
+    <option>Menu
+    <option>Progressbar
+    <option>Slider
+  </select>
+  <textarea title="This is a hint text."></textarea>
+</div>
+
+<div id="sample2">
+  <h2>Sample 2</h2>
+  <textarea title="Input 5 characters." style="height: 50px;"></textarea>
+  <div><button id="btn1">Change To Small</button><button id="btn2">Change To Big</button></div>
+</div>
+</div>
+<script>
+$('#normal').find('input,select,textarea').tooltip();
+
+$('#sample1').find('input,select,textarea').tooltip({
+  altPosition: {
+    minOuterHeight: 60,
+    tagName: 'select',
+    position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
+  }
+});
+
+$('#sample2').find('textarea').tooltip({
+  altPosition: {
+    minOuterHeight: 60,
+    callback: function() { return this.element.val().length >= 5; },
+    position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
+  }
+});
+$('#btn1').click(function() { $('#sample2 textarea').height(50); });
+$('#btn2').click(function() { $('#sample2 textarea').height(80); });
+</script>
+
       </section>
     </div>
 
