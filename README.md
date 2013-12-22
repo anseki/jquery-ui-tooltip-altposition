@@ -1,25 +1,18 @@
-# jquery-ui-tooltip-altposition
+# Alter Position jQuery UI Tooltip
 
-jQuery UI Tooltip which alters position according to the situation.  
+Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.  
 The default position is under the element. It looks best position. But, it is not sometimes.  
 For example, it overlap pulldown list of `select`, or it is too lower position under the high `textarea`.  
 ![jQuery UI Tooltip](sample1.png)
 
-This alters position by specified conditions. (e.g. height, tag-name)  
-[Demo](http://jsfiddle.net/uyyxh/)
+This plugin alters position by specified conditions. (e.g. height, tag-name)  
+**See <a href="http://anseki.github.io/jquery-ui-tooltip-altposition">DEMO</a>**
 
 ## Usage
 
-Load the `jquery.ui.tooltip.altposition.js` script file after loading `jquery.ui.tooltip.js` etc.
+- Load the `jquery.ui.tooltip.altposition.js` script file after loading `jquery.ui.tooltip.js` etc.
+- The `altPosition` Object is added to Tooltip options.
 
-```html
-<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/blitzer/jquery-ui.css" />
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script><!-- jquery.ui.tooltip.js is included -->
-<script type="text/javascript" src="/path/to/jquery.ui.tooltip.altposition.js"></script>
-```
-
-The `altPosition` Object is added to Tooltip options.  
 The position is altered to `altPosition.position` (alternative [option.position](http://api.jqueryui.com/tooltip/#option-position) Object of Tooltip) when any following conditions.
 
 + The tag-name of the element is `altPosition.tagName`.
@@ -43,3 +36,6 @@ $('input,textarea,select').tooltip({
   }
 });
 ```
+
+## Release History
+ * 2013-11-01			v0.1.0			Initial release.

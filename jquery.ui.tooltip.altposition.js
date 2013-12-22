@@ -1,5 +1,12 @@
+/*
+ * Alter Position jQuery UI Tooltip
+ * https://github.com/anseki/jquery-ui-tooltip-altposition
+ *
+ * Copyright (c) 2013 anseki
+ * Licensed under the MIT license.
+ */
 
-(function($, undefined) {
+(function($) {
 
 $.widget('ui.tooltip', $.ui.tooltip, {
   _open: function() {
