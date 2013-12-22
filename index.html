@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Alter Position jQuery UI Tooltip : Alter Position jQuery UI Tooltip Plugin to alters position according to the situation." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Alter Position jQuery UI Tooltip</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/anseki/jquery-ui-tooltip-altposition">View on GitHub</a>
+
+          <h1 id="project_title">Alter Position jQuery UI Tooltip</h1>
+          <h2 id="project_tagline">Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/anseki/jquery-ui-tooltip-altposition/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/anseki/jquery-ui-tooltip-altposition/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="alter-position-jquery-ui-tooltip" class="anchor" href="#alter-position-jquery-ui-tooltip"><span class="octicon octicon-link"></span></a>Alter Position jQuery UI Tooltip</h1>
+
+<p>Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.<br>
+The default position is under the element. It looks best position. But, it is not sometimes.<br>
+For example, it overlap pulldown list of <code>select</code>, or it is too lower position under the high <code>textarea</code>.<br><img src="sample1.png" alt="jQuery UI Tooltip"></p>
+
+<p>This plugin alters position by specified conditions. (e.g. height, tag-name)  </p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ul>
+<li>Load the <code>jquery.ui.tooltip.altposition.js</code> script file after loading <code>jquery.ui.tooltip.js</code> etc.</li>
+<li>The <code>altPosition</code> Object is added to Tooltip options.</li>
+</ul><p>The position is altered to <code>altPosition.position</code> (alternative <a href="http://api.jqueryui.com/tooltip/#option-position">option.position</a> Object of Tooltip) when any following conditions.</p>
+
+<ul>
+<li>The tag-name of the element is <code>altPosition.tagName</code>.</li>
+<li>
+<code>outerWidth</code> of the element is greater than or equal to <code>altPosition.minOuterWidth</code>
+</li>
+<li>
+<code>outerWidth</code> of the element is less than or equal to <code>altPosition.maxOuterWidth</code>
+</li>
+<li>
+<code>outerHeight</code> of the element is greater than or equal to <code>altPosition.minOuterHeight</code>
+</li>
+<li>
+<code>outerHeight</code> of the element is less than or equal to <code>altPosition.maxOuterHeight</code>
+</li>
+<li>
+<code>altPosition.callback</code> Function returns <code>true</code>
+</li>
+</ul><p><em>NOTE:</em> These are joined by <em>OR</em>. (The position is altered if one or more conditions.)</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input,textarea,select'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">tagName</span><span class="o">:</span> <span class="s1">'select'</span><span class="p">,</span>
+    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">;</span> <span class="p">},</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span> <span class="c1">// Right side</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Alter Position jQuery UI Tooltip maintained by <a href="https://github.com/anseki">anseki</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
