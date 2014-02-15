@@ -10,8 +10,8 @@ This plugin alters position by specified conditions. (e.g. height, tag-name)
 
 ## Usage
 
-- Load the `jquery.ui.tooltip.altposition.js` script file after loading `jquery.ui.tooltip.js` etc.
-- The `altPosition` Object is added to Tooltip options.
+- Load the `jquery.ui.tooltip.altposition.min.js` script file after loading `jquery.ui.tooltip.js` etc.
+- The `altPosition` is added to Tooltip options. It accept the Object which can have following properties.
 
 The position is altered to `altPosition.position` (alternative [option.position](http://api.jqueryui.com/tooltip/#option-position) Object of Tooltip) when any following conditions.
 
