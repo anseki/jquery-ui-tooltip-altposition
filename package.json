@@ -4,6 +4,7 @@
   "title": "Alter Position jQuery UI Tooltip",
   "description": "Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.",
   "keywords": [
+    "jquery-plugin",
     "ui",
     "tooltip",
     "position",
@@ -15,8 +16,10 @@
     "jquery.ui": ">=1.9"
   },
   "homepage": "http://anseki.github.io/jquery-ui-tooltip-altposition/",
-  "docs": "http://anseki.github.io/jquery-ui-tooltip-altposition/",
-  "download": "http://anseki.github.io/jquery-ui-tooltip-altposition/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anseki/jquery-ui-tooltip-altposition.git"
+  },
   "bugs": "https://github.com/anseki/jquery-ui-tooltip-altposition/issues",
   "licenses": "MIT",
   "author": {
