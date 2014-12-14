@@ -1,22 +1,22 @@
 
-.sample-01-wrap {
+#sample-01-wrap {
   margin: 10px 0;
   padding: 20px;
 }
 
-.sample-01-wrap input {
+#sample-01-wrap input {
   width: 200px;
 }
 
-.sample-01-wrap textarea {
+#sample-01-wrap textarea {
   width: 200px;
   height: 150px;
 }
 
-.sample-01-wrap input,
-.sample-01-wrap select,
-.sample-01-wrap textarea,
-.sample-01-wrap button {
+#sample-01-wrap input,
+#sample-01-wrap select,
+#sample-01-wrap textarea,
+#sample-01-wrap button {
   margin: 10px;
   vertical-align: top;
 }
