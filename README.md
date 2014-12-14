@@ -2,8 +2,9 @@
 
 Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.  
 The default position is under the element. It looks best position. But, it is not sometimes.  
-For example, it overlap pulldown list of `select`, or it is too lower position under the high `textarea`.  
-![jQuery UI Tooltip](sample1.png)
+For example, it overlap pulldown list of `select`, or it is too lower position under the high `textarea`.
+
+![jQuery UI Tooltip](sample-01.png)
 
 This plugin alters position by specified conditions. (e.g. height, tag-name)  
 **See <a href="http://anseki.github.io/jquery-ui-tooltip-altposition">DEMO</a>**
@@ -37,5 +38,5 @@ $('input,textarea,select').tooltip({
 });
 ```
 
-## Release History
+## History
  * 2013-11-01			v0.1.0			Initial release.
