@@ -1,99 +1,71 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/syntax.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/blitzer/jquery-ui.css" />
+  <link rel="stylesheet" href="css/sample.css">
+  <!-- Libs for sample codes must be loaded in "head". -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="js/jquery.ui.tooltip.altposition.min.js"></script>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Alter Position jQuery UI Tooltip : Alter Position jQuery UI Tooltip Plugin to alters position according to the situation." />
+  <title>Alter Position jQuery UI Tooltip</title>
+</head>
+<body>
+  <header>
+    <h1><a href="./">Alter Position<br>jQuery UI Tooltip</a></h1>
+    <ul id="gh"><li><a href="https://github.com/anseki/jquery-ui-tooltip-altposition/tarball/master">Download TAR.GZ</a></li><li><a href="https://github.com/anseki/jquery-ui-tooltip-altposition/zipball/master">Download ZIP</a></li><li><a href="https://github.com/anseki/jquery-ui-tooltip-altposition">View on GitHub</a></li></ul>
+  </header>
+  <main>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<p>Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.<br>The default position is under the element. It looks best position. But, it is not sometimes.<br>For example, it overlap pulldown list of <code>select</code>, or it is too lower position under the high <code>textarea</code>.</p>
 
-<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/blitzer/jquery-ui.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/sample.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="javascripts/jquery.ui.tooltip.altposition.min.js"></script>
-
-    <title>Alter Position jQuery UI Tooltip</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/anseki/jquery-ui-tooltip-altposition">View on GitHub</a>
-
-          <h1 id="project_title">Alter Position jQuery UI Tooltip</h1>
-          <h2 id="project_tagline">Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/anseki/jquery-ui-tooltip-altposition/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/anseki/jquery-ui-tooltip-altposition/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-
-<p>Alter Position jQuery UI Tooltip Plugin to alters position according to the situation.<br>
-The default position is under the element. It looks best position. But, it is not sometimes.<br>
-For example, it overlap pulldown list of <code>select</code>, or it is too lower position under the high <code>textarea</code>.<br><img src="images/sample1.png" width="365" height="242" alt="jQuery UI Tooltip"></p>
+<p><img src="img/sample-01.png" alt="jQuery UI Tooltip"></p>
 
 <p>This plugin alters position by specified conditions. (e.g. height, tag-name)  </p>
 
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<h2 id="usage">Usage</h2>
 
 <ul>
 <li>Load the <code>jquery.ui.tooltip.altposition.min.js</code> script file after loading <code>jquery.ui.tooltip.js</code> etc.</li>
 <li>The <code>altPosition</code> is added to Tooltip options. It accept the Object which can have following properties.</li>
-</ul><p>The position is altered to <code>altPosition.position</code> (alternative <a href="http://api.jqueryui.com/tooltip/#option-position">option.position</a> Object of Tooltip) when any following conditions.</p>
+</ul>
+
+<p>The position is altered to <code>altPosition.position</code> (alternative <a href="http://api.jqueryui.com/tooltip/#option-position">option.position</a> Object of Tooltip) when any following conditions.</p>
 
 <ul>
 <li>The tag-name of the element is <code>altPosition.tagName</code>.</li>
-<li>
-<code>outerWidth</code> of the element is greater than or equal to <code>altPosition.minOuterWidth</code>
-</li>
-<li>
-<code>outerWidth</code> of the element is less than or equal to <code>altPosition.maxOuterWidth</code>
-</li>
-<li>
-<code>outerHeight</code> of the element is greater than or equal to <code>altPosition.minOuterHeight</code>
-</li>
-<li>
-<code>outerHeight</code> of the element is less than or equal to <code>altPosition.maxOuterHeight</code>
-</li>
-<li>
-<code>altPosition.callback</code> Function returns <code>true</code>
-</li>
-</ul><p><em>NOTE:</em> These are joined by <em>OR</em>. (The position is altered if one or more conditions.)</p>
+<li><code>outerWidth</code> of the element is greater than or equal to <code>altPosition.minOuterWidth</code></li>
+<li><code>outerWidth</code> of the element is less than or equal to <code>altPosition.maxOuterWidth</code></li>
+<li><code>outerHeight</code> of the element is greater than or equal to <code>altPosition.minOuterHeight</code></li>
+<li><code>outerHeight</code> of the element is less than or equal to <code>altPosition.maxOuterHeight</code></li>
+<li><code>altPosition.callback</code> Function returns <code>true</code></li>
+</ul>
 
-<h2>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+<p><em>NOTE:</em> These are joined by <em>OR</em>. (The position is altered if one or more conditions.)</p>
 
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#sample1'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'input,select,textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;input,textarea,select&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
   <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
-    <span class="nx">tagName</span><span class="o">:</span> <span class="s1">'select'</span><span class="p">,</span>
-    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
+    <span class="nx">tagName</span><span class="o">:</span> <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">;</span> <span class="p">},</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">&#39;left+15 top&#39;</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">&#39;right top&#39;</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">&#39;flipfit&#39;</span><span class="p">}</span> <span class="c1">// Right side</span>
   <span class="p">}</span>
 <span class="p">});</span>
+</code></pre></div>
+<!-- include "sample_01.html" -->
+<!-- ================ sample -->
+<div class="sample-01-wrap">
 
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#sample2'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
-  <span class="nx">altPosition</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">minOuterHeight</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
-    <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="p">},</span>
-    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span><span class="nx">my</span><span class="o">:</span> <span class="s1">'left+15 top'</span><span class="p">,</span> <span class="nx">at</span><span class="o">:</span> <span class="s1">'right top'</span><span class="p">,</span> <span class="nx">collision</span><span class="o">:</span> <span class="s1">'flipfit'</span><span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
-
-<div class="sample-view">
-<div id="normal">
-  <h2>Normal</h2>
+<div id="sample-01-normal">
+  <h3>Normal</h3>
   <input type="text" value="" title="No problem.">
   <select title="Overlap pulldown list.">
     <option>Accordion
@@ -108,8 +80,8 @@ For example, it overlap pulldown list of <code>select</code>, or it is too lower
   <textarea title="Too lower."></textarea>
 </div>
 
-<div id="sample1">
-  <h2>Sample 1</h2>
+<div id="sample-01-01">
+  <h3>Sample 1</h3>
   <input type="text" value="" title="This is a hint text.">
   <select title="This is a hint text.">
     <option>Accordion
@@ -124,16 +96,21 @@ For example, it overlap pulldown list of <code>select</code>, or it is too lower
   <textarea title="This is a hint text."></textarea>
 </div>
 
-<div id="sample2">
-  <h2>Sample 2</h2>
+<div id="sample-01-02">
+  <h3>Sample 2</h3>
   <textarea title="Input 5 characters." style="height: 50px;"></textarea>
-  <div><button id="btn1">Change To Small</button><button id="btn2">Change To Big</button></div>
+  <div>
+    <button id="sample-01-02-button-01">Change To Small</button>
+    <button id="sample-01-02-button-02">Change To Big</button>
+  </div>
 </div>
-</div>
-<script>
-$('#normal').find('input,select,textarea').tooltip();
 
-$('#sample1').find('input,select,textarea').tooltip({
+</div>
+
+<script>
+$('#sample-01-normal').find('input,select,textarea').tooltip();
+
+$('#sample-01-01').find('input,select,textarea').tooltip({
   altPosition: {
     minOuterHeight: 60,
     tagName: 'select',
@@ -141,29 +118,24 @@ $('#sample1').find('input,select,textarea').tooltip({
   }
 });
 
-$('#sample2').find('textarea').tooltip({
+$('#sample-01-02').find('textarea').tooltip({
   altPosition: {
     minOuterHeight: 60,
     callback: function() { return this.element.val().length >= 5; },
     position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
   }
 });
-$('#btn1').click(function() { $('#sample2 textarea').height(50); });
-$('#btn2').click(function() { $('#sample2 textarea').height(80); });
+
+$('#sample-01-02-button-01').click(function() { $('#sample-01-02 textarea').height(50); });
+$('#sample-01-02-button-02').click(function() { $('#sample-01-02 textarea').height(80); });
 </script>
+<!-- ================ /sample -->
+<!-- /include "sample_01.html" -->
 
-      </section>
-    </div>
+  </main>
+  <footer>
+    <p class="copyright">Alter Position jQuery UI Tooltip maintained by <a href="https://github.com/anseki">anseki</a></p>
+  </footer>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Alter Position jQuery UI Tooltip maintained by <a href="https://github.com/anseki">anseki</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>

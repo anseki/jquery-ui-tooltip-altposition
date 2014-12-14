@@ -1,21 +1,26 @@
 
-.sample-view {
-  margin: 5px 0 100px;
+.sample-01-wrap {
+  margin: 10px 0;
   padding: 20px;
-  background-color: #ccc;
 }
 
-.sample-view input {
+.sample-01-wrap input {
   width: 200px;
 }
-.sample-view textarea {
+
+.sample-01-wrap textarea {
   width: 200px;
   height: 150px;
 }
-.sample-view input,select,textarea,button {
+
+.sample-01-wrap input,
+.sample-01-wrap select,
+.sample-01-wrap textarea,
+.sample-01-wrap button {
   margin: 10px;
   vertical-align: top;
 }
+
 .ui-tooltip.ui-widget {
   background-color: #c2deb8;
   background-image: none;
