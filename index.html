@@ -108,26 +108,30 @@
 </div>
 
 <script>
-$('#sample-01-normal').find('input,select,textarea').tooltip();
+$(function() {
 
-$('#sample-01-01').find('input,select,textarea').tooltip({
-  altPosition: {
-    minOuterHeight: 60,
-    tagName: 'select',
-    position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
-  }
+  $('#sample-01-normal').find('input,select,textarea').tooltip();
+
+  $('#sample-01-01').find('input,select,textarea').tooltip({
+    altPosition: {
+      minOuterHeight: 60,
+      tagName: 'select',
+      position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
+    }
+  });
+
+  $('#sample-01-02').find('textarea').tooltip({
+    altPosition: {
+      minOuterHeight: 60,
+      callback: function() { return this.element.val().length >= 5; },
+      position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
+    }
+  });
+
+  $('#sample-01-02-button-01').click(function() { $('#sample-01-02 textarea').height(50); });
+  $('#sample-01-02-button-02').click(function() { $('#sample-01-02 textarea').height(80); });
+
 });
-
-$('#sample-01-02').find('textarea').tooltip({
-  altPosition: {
-    minOuterHeight: 60,
-    callback: function() { return this.element.val().length >= 5; },
-    position: {my: 'left+15 top', at: 'right top', collision: 'flipfit'} // Right side
-  }
-});
-
-$('#sample-01-02-button-01').click(function() { $('#sample-01-02 textarea').height(50); });
-$('#sample-01-02-button-02').click(function() { $('#sample-01-02 textarea').height(80); });
 </script>
 <!-- ================ /sample -->
 <!-- /include "sample_01.html" -->
