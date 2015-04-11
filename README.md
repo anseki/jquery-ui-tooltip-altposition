@@ -37,6 +37,3 @@ $('input,textarea,select').tooltip({
   }
 });
 ```
-
-## History
- * 2013-11-01			v0.1.0			Initial release.
