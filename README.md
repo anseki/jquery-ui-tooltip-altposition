@@ -7,7 +7,7 @@ For example, it overlap pulldown list of `select`, or it is too lower position u
 ![jQuery UI Tooltip](sample-01.png)
 
 This plugin alters position by specified conditions. (e.g. height, tag-name)  
-**See <a href="http://anseki.github.io/jquery-ui-tooltip-altposition">DEMO</a>**
+**See <a href="http://anseki.github.io/jquery-ui-tooltip-altposition/">DEMO</a>**
 
 ## Usage
 
