@@ -12,6 +12,13 @@
     "overlap",
     "pulldown"
   ],
+  "main": "jquery.ui.tooltip.altposition.min.js",
+  "files": [
+    "jquery.ui.tooltip.altposition.min.js",
+    "bower.json",
+    "ui.tooltip.altposition.jquery.json",
+    "LICENSE-MIT"
+  ],
   "dependencies": {
     "jquery": ">=1.6",
     "jquery-ui": ">=1.9"
