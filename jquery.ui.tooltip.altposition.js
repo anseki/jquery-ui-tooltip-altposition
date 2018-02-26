@@ -1,6 +1,6 @@
 /*
  * Alter Position jQuery UI Tooltip
- * http://anseki.github.io/jquery-ui-tooltip-altposition/
+ * https://anseki.github.io/jquery-ui-tooltip-altposition/
  *
  * Copyright (c) 2018 anseki
  * Licensed under the MIT license.
