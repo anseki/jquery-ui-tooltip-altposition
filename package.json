@@ -16,8 +16,7 @@
   "files": [
     "jquery.ui.tooltip.altposition.min.js",
     "bower.json",
-    "ui.tooltip.altposition.jquery.json",
-    "LICENSE-MIT"
+    "ui.tooltip.altposition.jquery.json"
   ],
   "dependencies": {
     "jquery": ">=1.6",
